@@ -10,9 +10,7 @@ class Harl {
             void    warning();
             void    error();
     public:
-            Harl();
             void    complain(std::string level);
-            ~Harl();
 
 };
 

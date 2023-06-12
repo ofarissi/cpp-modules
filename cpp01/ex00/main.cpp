@@ -2,7 +2,7 @@
 
 int main()
 {
-    Zombie  z1("othmane");
+    Zombie  z1("objmane");
     Zombie  z2("hamza");
     Zombie  *z3;
 

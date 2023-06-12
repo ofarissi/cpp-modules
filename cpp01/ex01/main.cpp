@@ -4,7 +4,7 @@ int main()
 {
     int n = 3;
 
-    std::string user = "othmane";
+    std::string user = "objmane";
     
     Zombie  *arr = zombieHorde(n,user);
     std::cout << "here" << std::endl;

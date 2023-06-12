@@ -16,7 +16,7 @@ $(NAME) : $(OBJ)
 clean :
 		$(RM) $(OBJ)
 
-fclean : $(CLEAN)
+fclean : clean
 		 $(RM) $(NAME)
 
 re : $(FCLEAN) $(NAME)
