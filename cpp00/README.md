@@ -13,11 +13,13 @@ The second exercise is a bit more complicated. Its purpose is to create a progra
 Definitions:
 
     Object-Oriented Programming (OOP):
-    Object-Oriented Programming (OOP) is a programming paradigm that organizes data and functions into objects. It emphasizes the concepts of encapsulation, inheritance, and polymorphism to create modular and reusable code. In OOP, objects are instances of classes, which encapsulate data (attributes) and behaviors (methods).
+    Object-Oriented Programming (OOP) is a programming paradigm that organizes data and functions into objects. It emphasizes the concepts of encapsulation,
+    inheritance, and polymorphism to create modular and reusable code. In OOP, objects are instances of classes, which encapsulate data (attributes) and 
+    behaviors (methods).
 
     Class Syntax:
-    A class in C++ defines a blueprint for creating objects. It specifies the attributes and behaviors that objects of that class should have. The general syntax for a class declaration is as follows:
-
+    A class in C++ defines a blueprint for creating objects. It specifies the attributes and behaviors that objects of that class should have. 
+    The general syntax for a class declaration is as follows:
     cpp
 
 class ClassName {
