@@ -1,4 +1,4 @@
-# Module README
+# Module 01
 
 This module focuses on four important concepts in C++ programming. By working through the exercises in this module, you will gain a better understanding of the following topics:
 
