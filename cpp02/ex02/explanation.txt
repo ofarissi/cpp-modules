@@ -1,0 +1,37 @@
+Conversion from Integer to Fixed-Point (General Terms):
+
+a. Start with an integer value that you want to represent in fixed-point format.
+
+b. Determine the number of fractional bits you want in the fixed-point representation. This determines the precision of the fractional part.
+
+c. Multiply the integer value by a scaling factor. The scaling factor is typically calculated as 1 divided by 2^fractionalBits, where fractionalBits is the number of fractional bits.
+
+d. The result of the multiplication will be a floating-point value. Discard the fractional part and keep the integer part.
+
+e. Convert the integer part to binary format.
+
+f. Reverse the binary representation, align it with the fixed-point format, and pad with zeroes to the right to fill up the fractional bits.
+
+g. The resulting binary representation is the fixed-point representation of the original integer value.
+
+Conversion from Integer to Fixed-Point (C++ Implementation):
+
+a. Create a class Fixed to represent the fixed-point numbers.
+
+b. Declare private member variables in the Fixed class: numValue to store the fixed-point number value and numBits as a static constant integer to store the number of fractional bits (e.g., 8).
+
+c. Implement a default constructor, copy constructor, copy assignment operator overload, and destructor.
+
+d. Implement member functions getRawBits() and setRawBits() to access and modify the raw value of the fixed-point number.
+
+e. In the constructor that takes an integer parameter, calculate the scaling factor by dividing 1 by 2^numBits.
+
+f. Multiply the integer parameter by the scaling factor, discard the fractional part, and assign the resulting integer value to numValue.
+
+g. In getRawBits(), return the value of numValue.
+
+h. In setRawBits(), assign the input parameter to numValue.
+
+i. Use bitwise shifting and logical operations to convert the integer value stored in numValue to its binary representation, pad it with zeroes, and reverse it as necessary.
+
+when using an overloaded operator inside a class, the calling object is automatically considered as the first operand, and you don't need to pass it explicitly.
