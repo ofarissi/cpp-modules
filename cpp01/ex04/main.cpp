@@ -8,6 +8,8 @@ int main(int ac, char **av)
         return 0;
     }
 
+    if (!av[2][0])
+        return ((void)(std::cout << "Nothing To Replace\n"), 1);
     // Step1: Open file and read the content
 
     std::string     tmp;

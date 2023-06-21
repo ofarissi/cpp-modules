@@ -1,6 +1,6 @@
 SRC = main.cpp
 
-CC = g++
+CC = c++
 
 OBJ = $(SRC:.cpp=.o)
 

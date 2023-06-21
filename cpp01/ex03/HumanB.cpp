@@ -12,7 +12,7 @@ void    HumanB::setWeapon(Weapon &weapon)
 
 void    HumanB::attack()
 {
-    if (weapon){
+    if (weapon) {
         std::cout << name << " attack with their " 
                   << weapon->getType() << std::endl;
     }

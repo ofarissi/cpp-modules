@@ -1,6 +1,6 @@
 SRC =	main.cpp Zombie.cpp zombieHorde.cpp
 
-CC = g++
+CC = c++
 
 CPPFLAGS = -Wextra -Wall -Werror -std=c++98
 

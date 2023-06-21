@@ -14,35 +14,17 @@ void Harl::warning() {
 
 void Harl::error() {
         std::cout << "ERROR: This is unacceptable! I want to speak to the manager now." << std::endl;
-    }
+}
 
-// returnType (ClassName::*ptrName)(parameters)
-// ptrName = &ClassName::memberFunction;
 void    Harl::complain(std::string level)
 {
-    void    (Harl::*ptr)();
+    std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    void    (Harl::*ptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
-    if (level == "DEBUG")
+    for (int  i = 0; i < 4; i++)
     {
-        ptr = &Harl::debug;
-        (this->*ptr)();
+        if (levels[i] == level)
+            return (this->*ptr[i])();
     }
-    else if (level == "INFO")
-    {
-        ptr = &Harl::info;
-        (this->*ptr)();
-    }
-    else if (level == "WARNING")
-    {
-        ptr = &Harl::warning;
-        (this->*ptr)();
-    }
-    else if (level == "ERROR")
-    {
-       ptr = &Harl::error;
-       (this->*ptr)();
-    }
-    else {
-        std::cout << "Invalid complaint level!" << std::endl;
-    }
+    std::cout << "Invalid complaint level!" << std::endl;
 }

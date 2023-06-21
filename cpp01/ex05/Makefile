@@ -1,6 +1,6 @@
 SRC = main.cpp Harl.cpp
 
-CC = g++
+CC = c++
 
 CPPFLAGS = -Wextra -Werror -Wall -std=c++98
 

@@ -1,6 +1,6 @@
 SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
-CC = g++
+CC = c++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

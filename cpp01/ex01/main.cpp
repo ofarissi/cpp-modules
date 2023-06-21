@@ -4,10 +4,9 @@ int main()
 {
     int n = 3;
 
-    std::string user = "objmane";
+    std::string user = "othm";
     
-    Zombie  *arr = zombieHorde(n,user);
-    std::cout << "here" << std::endl;
+    Zombie  *arr = zombieHorde(n, user);
     for (int i = 0; i < n; i++) {
         arr[i].announce();
     }

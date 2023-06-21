@@ -3,6 +3,7 @@
 
 #include	"Contact.hpp"
 #include	<iomanip>
+#include	<string>
 #include	<sstream>
 #include	<cstdio>
 
@@ -14,7 +15,7 @@ private:
 public:
         PhoneBook();
         void addContact();
-		void	search();
+	void	search();
         void    displayContact(int index);
         std::string    ft_getline();
         ~PhoneBook();
