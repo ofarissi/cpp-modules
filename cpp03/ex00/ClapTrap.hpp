@@ -10,8 +10,8 @@ class ClapTrap {
             int energyPoints;
             int attackPoints;
     public:
-            ClapTrap(std::string name);
             ClapTrap();
+            ClapTrap(std::string name);
             ClapTrap(const ClapTrap& source);
             ClapTrap& operator=(const ClapTrap& source);
             void    attack(const std::string& target);

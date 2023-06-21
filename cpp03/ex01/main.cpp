@@ -20,7 +20,7 @@ int main()
 
 		c.attack("robot");
 		// for (int i = 0; i < 50; i++)
-		// 	c.attack("CloneTrap");
+		// 	c.attack("human");
 		c.beRepaired(22);
 		c.takeDamage(21);
 		c.beRepaired(20);

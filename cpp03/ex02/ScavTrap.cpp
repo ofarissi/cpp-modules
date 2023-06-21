@@ -6,7 +6,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->flag = false;
-    std::cout << "ScavTrap Constructor named " << this->name << " called" << std::endl;
+    std::cout << "ScavTrap: " << this->name << " : Constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap() : ClapTrap()
@@ -15,7 +15,7 @@ ScavTrap::ScavTrap() : ClapTrap()
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->flag = false;
-    std::cout << "ScavTrap Default Constructor called" << std::endl;
+    std::cout << "ScavTrap: " << this->name << " : Constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& source) : ClapTrap(source)
@@ -57,14 +57,14 @@ void    ScavTrap::guardGate()
 {
     if (this->flag == false) {
         this->flag = true;
-        std::cout << "ScavTrap " << this->name << " is guarding the gate" << std::endl;
+        std::cout << "ScavTrap: " << this->name << " is guarding the gate" << std::endl;
     }
     else {
-        std::cout << "ScavTrap " << this->name << " is already guarding the gate" << std::endl;
+        std::cout << "ScavTrap: " << this->name << " is already guarding the gate" << std::endl;
     }
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << this->name << " : Destructor called" << std::endl;
+    std::cout << "ScavTrap: " << this->name << " : Destructor called" << std::endl;
 }

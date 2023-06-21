@@ -5,7 +5,7 @@ FragTrap::FragTrap() : ClapTrap()
     this->hitPoints = 100;
     this->energyPoints = 100;
     this->attackPoints = 30;
-    std::cout << "FragTrap Default Constructor called." << std::endl;
+    std::cout << "FragTrap: Default : Constructor called." << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
@@ -13,12 +13,27 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
     this->hitPoints = 100;
     this->energyPoints = 100;
     this->attackPoints = 30;
-    std::cout << "FragTrap: " << this->name << " Constructor called." << std::endl;
+    std::cout << "FragTrap: " << this->name << " : Constructor called." << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& source) : ClapTrap(source)
 {
     std::cout << "FragTrap: " << this->name << " Copy Constructor called." << std::endl;
+}
+
+void    FragTrap::attack(const std::string& target)
+{
+    if (this->energyPoints > 0 && this->hitPoints > 0){
+        this->energyPoints -= 1;
+        std::cout << "FragTrap: " << this->name << " attacks " << target
+        << ", causing " << this->attackPoints << " points of damage!" << std::endl;
+    }
+    else if (this->energyPoints <= 0) {
+        std::cout << "FragTrap: " << this->name << " does have not enough energy points to attack!" << std::endl;
+    }
+    else {
+        std::cout << "FragTrap: " << this->name << " does have not enough hit points to attack!" << std::endl;
+    }
 }
 
 FragTrap&   FragTrap::operator=(const FragTrap& source)
@@ -37,10 +52,10 @@ FragTrap&   FragTrap::operator=(const FragTrap& source)
 
 FragTrap::~FragTrap()
 {
-    std::cout << "FragTrap Deconstructor for " << this->name << " called" << std::endl;
+    std::cout << "FragTrap: " << this->name << " : Destructor called" << std::endl;
 }
 
 void    FragTrap::highFivesGuys()
 {
-    std::cout << "FragTrap " << this->name << ": Here's your hive:\n\t*HIGH FIVE*" << std::endl;
+    std::cout << "FragTrap: " << this->name << " : Here's your hive:\n\t*HIGH FIVE*" << std::endl;
 }

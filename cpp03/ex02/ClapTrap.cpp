@@ -8,7 +8,6 @@ ClapTrap::ClapTrap(std::string name)
     this->energyPoints = 10;
     std::cout << "ClapTrap: " << this->name << " : Constructor called" << std::endl;
 }
-
 ClapTrap::ClapTrap()
 {
     this->name = "Default";
@@ -35,16 +34,16 @@ void    ClapTrap::attack(const std::string& target)
 
 ClapTrap::ClapTrap(const ClapTrap& source)
 {
-    std::cout << " copy Constructor called" << std::endl;
+    std::cout << "ClapTrap copy Constructor called" << std::endl;
     this->name = source.name;
-	this->hitPoints = source.hitPoints;
-	this->energyPoints = source.energyPoints;
-	this->attackPoints = source.attackPoints;
+	this->hitPoints = getHitPoints();
+	this->energyPoints = getEnergyPoints();
+	this->attackPoints = getAttackPoints();
 }
 
 ClapTrap&   ClapTrap::operator=(const ClapTrap& source)
 {
-    std::cout << "ClapTrap Assignment operator called" << std::endl;
+    std::cout << "ClapTrap Assignation operator called" << std::endl;
 	
     if (this == &source)
     {
@@ -68,7 +67,7 @@ void    ClapTrap::takeDamage(unsigned int amount)
         << " point of damage!" << std::endl;
     }
     else {
-        std::cout << "chill " << this->name << " is already dead!" << std::endl;
+        std::cout << "ClapTrap: " << "chill " << this->name << " is already dead!" << std::endl;
     }
 }
 
@@ -92,9 +91,10 @@ void    ClapTrap::beRepaired(unsigned int amount)
     }
 }
 
+
 ClapTrap::~ClapTrap()
 {
-    std::cout << this->name << " : Destructor called" << std::endl;
+    std::cout << "ClapTrap: " << this->name << " : Destructor called" << std::endl;
 }
 
 int ClapTrap::getAttackPoints() const

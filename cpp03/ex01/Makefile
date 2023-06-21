@@ -1,6 +1,6 @@
 SRC =	main.cpp ClapTrap.cpp ScavTrap.cpp
 
-CC = g++
+CC = c++
 
 CPPFLAGS = -Wextra -Wall -Werror -std=c++98
 

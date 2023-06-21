@@ -1,4 +1,5 @@
 #include    "FragTrap.hpp"
+#include    "ScavTrap.hpp"
 
 int main()
 {
@@ -11,8 +12,8 @@ int main()
 		// a.beRepaired(5);
 		// a.attack("A monster");
 		// b.beRepaired(3);
-		// for (int i = 0; i < 12; i++)
-			// b.attack("A big monster");
+		// // for (int i = 0; i < 12; i++)
+		// // 	b.attack("A big monster");
 		// b.beRepaired(3);
 
 		// ScavTrap c;

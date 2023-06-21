@@ -9,20 +9,19 @@ Fixed::Fixed()
 Fixed::Fixed(const int num)
 {
     std::cout << "Int constructor called" << std::endl;
-    float scalingFactor = (1 << numBits);
-    numValue = static_cast<int>(num * scalingFactor);
+    numValue = (num << numBits);
 }
 
 Fixed::Fixed(const float num) {
     std::cout << "Float constructor called" << std::endl;
     float scalingFactor = 1 << numBits;
-    numValue = static_cast<int>(roundf(num * scalingFactor));
+    numValue = roundf(num * scalingFactor);
 }
 
 
 int Fixed::toInt() const {
     float scalingFactor = (1.0f / (1 << numBits));
-    int value = static_cast<int>(getRawBits() * scalingFactor);
+    int value = getRawBits() * scalingFactor;
     
     return value;
 }
@@ -121,16 +120,16 @@ bool	Fixed::operator!=(const Fixed& source) const
 
 Fixed	Fixed::operator++(int)
 {
-	Fixed	temp(*this);
+	Fixed	tmp(*this);
 	++(*this);
-	return temp;
+	return tmp;
 }
 
 Fixed	Fixed::operator--(int)
 {
-	Fixed	temp(*this);
+	Fixed	tmp(*this);
 	--(*this);
-	return temp;
+	return tmp;
 }
 
 //pre(increment/decrement)

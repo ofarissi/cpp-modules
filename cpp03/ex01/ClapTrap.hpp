@@ -23,5 +23,4 @@ class ClapTrap {
             ~ClapTrap();
 };
 
-
 #endif

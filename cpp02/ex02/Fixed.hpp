@@ -17,10 +17,12 @@ class Fixed
         float toFloat() const;
         Fixed(const Fixed& source);
         Fixed& operator=(const Fixed& source);
-        friend std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
+        
         ~Fixed();
         int getRawBits() const;
         void setRawBits(const int raw);
+
+
 
         // overloading 6 comparison operator:
 
@@ -50,8 +52,10 @@ class Fixed
         static Fixed& min(Fixed& num1, Fixed& num2);
         static const Fixed& min(const Fixed& num1, const Fixed& num2);
         static Fixed& max(Fixed& num1, Fixed& num2);
-        static const Fixed& max(const Fixed& num1, const Fixed& num2);
+        // static const Fixed& max(const Fixed& num1, const Fixed& num2);
 
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif
