@@ -8,7 +8,7 @@ Dog::Dog() : Animal()
 	if (this->brain == NULL)
 	{
 		perror("Dog Brain allocation failed");
-		std::cerr << "Exiting the process now." << std::endl;
+		std::cerr << "Exiting the process." << std::endl;
 		exit(1);
 	}
 }
@@ -21,7 +21,7 @@ Dog::Dog(const Dog& source) : Animal(source)
 	if (this->brain == NULL)
 	{
 		perror("Dog Brain allocation failed");
-		std::cerr << "Exiting the process now." << std::endl;
+		std::cerr << "Exiting the process." << std::endl;
 		exit(1);
 	}
 	*this->brain = *source.brain;
@@ -39,7 +39,7 @@ Dog& Dog::operator=(const Dog& source)
 	if (this->brain == NULL)
 	{
 		perror("Dog Brain allocation failed");
-		std::cerr << "Exiting the process now." << std::endl;
+		std::cerr << "Exiting the process." << std::endl;
 		exit(1);
 	}
 	*this->brain = *source.brain;

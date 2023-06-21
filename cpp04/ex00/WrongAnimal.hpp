@@ -10,10 +10,22 @@ public:
     WrongAnimal();
     WrongAnimal(const WrongAnimal& other);
     WrongAnimal& operator=(const WrongAnimal& other);
-    virtual ~WrongAnimal();
+    ~WrongAnimal();
     std::string getType() const;
-    virtual void makeSound() const;
+    void makeSound() const;
 };
+
+// WrongAnimal Constructor Called
+// type: WrongAnimal
+// WrongAnimal sound
+// WrongAnimal Destructor Called
+//         *************
+// WrongAnimal Constructor Called
+// WrongCat Constructor Called
+// type: WrongCat
+// Woof Woof
+// WrongCat Destructor Called
+// WrongAnimal Destructor Called
 
 
 #endif

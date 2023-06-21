@@ -46,7 +46,7 @@ int main()
 	if (a == NULL)
 	{
 		perror("Allocation failed");
-		std::cerr << "Exiting the process now." << std::endl;
+		std::cerr << "Exiting the process." << std::endl;
 		exit(1);
 	}
 
